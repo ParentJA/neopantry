@@ -1,0 +1,12 @@
+<div class="middle-center">
+  <h1 class="landing logo">Neopantry</h1>
+  <div *ngIf="getUser(); then thenBlock; else elseBlock;"></div>
+  <ng-template #thenBlock>
+    <a class="btn btn-primary" [routerLink]="'/recipe'">Recipes</a>
+    <button class="btn btn-primary ml-1" (click)="logOut()">Log out</button>
+  </ng-template>
+  <ng-template #elseBlock>
+    <a class="btn btn-primary" [routerLink]="['/log-in']">Log in</a>
+    <a class="btn btn-primary ml-1" [routerLink]="['/sign-up']">Sign up</a>
+  </ng-template>
+</div>

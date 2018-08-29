@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <form novalidate (ngSubmit)="search()">
+      <div class="input-group mb-3">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Find a recipe"
+          name="search"
+          required
+          [formControl]="searchControl"
+        >
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">Filters</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-sm-6">{{ recipeData.count }} recipes</div>
+        <div class="col-sm-6"></div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="card-group">
+      <div class="card" [routerLink]="['/recipe', recipe.id]" *ngFor="let recipe of recipeData.results">
+        <img class="card-img-top" [src]="recipe.photo" [alt]="recipe.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.name }}</h5>
+          <span>{{ recipe.averageRating }}/5</span><br>
+          <span>Reviews (<a href [routerLink]="['/recipe', recipe.id, 'review']">{{ recipe.numReviews }}</a>)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

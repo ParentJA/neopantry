@@ -1,0 +1,18 @@
+- fields:
+    date_joined: 2015-12-13 16:48:08+00:00
+    date_of_birth: 1984-08-10
+    email: jason.a.parent@gmail.com
+    first_name: Jason
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2016-08-06 19:26:33.631216+00:00
+    last_name: Parent
+    password: pbkdf2_sha256$20000$QuIZ3DVftmgO$J7ic8JkEV+5yu37tFgvf36Ib1aqeTVNJ689AsO6Lxnk=
+    phone_number: 860-977-7458
+    photo: photos/no-image.jpg
+    user_permissions: []
+    username: parentj
+  model: accounts.user
+  pk: 1
