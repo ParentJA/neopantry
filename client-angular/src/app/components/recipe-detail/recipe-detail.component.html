@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href [routerLink]="['..']">Recipes</a>
+        </li>
+        <li class="breadcrumb-item active">{{ recipe.name }}</li>
+      </ol>
+    </nav>
+    <img class="img-fluid" [src]="recipe.photo" [alt]="recipe.name">
+    <h2 class="text-center">{{ recipe.name }}</h2>
+  </div>
+  <div class="w-100"></div>
+  <div class="col text-center">
+    <span>{{ recipe.averageRating }}/5</span><br>
+    <span>Reviews (<a href [routerLink]="['./review']">{{ recipe.numReviews }}</a>)</span>
+  </div>
+  <div class="col text-center">
+    <span>{{ recipe.averageMakeAgain }}%</span><br>
+    <span>Make it again</span>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    <p [innerHTML]="recipe.description"></p>
+    <strong>Ingredients</strong>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient.description }}</li>
+    </ul>
+    <strong>Instructions</strong>
+    <p [innerHTML]="recipe.instructions"></p>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    <strong>My Notes</strong>
+    <form novalidate [formGroup]="noteForm" (submit)="onDone()">
+        <div class="form-group">
+          <label for="note">Note:</label>
+          <textarea id="note" class="form-control" rows="5" formControlName="note" name="note" required></textarea>
+        </div>
+      <button class="btn btn-primary btn-block" type="submit" [disabled]="false">Done</button>
+    </form>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    <strong>My Review</strong>
+    <form novalidate [formGroup]="reviewForm" (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="review">Review:</label>
+          <textarea id="review" class="form-control" rows="5" formControlName="review" name="review" required></textarea>
+        </div>
+      <button class="btn btn-primary btn-block" type="submit" [disabled]="false">Submit</button>
+    </form>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    <strong>Reviews</strong>
+  </div>
+</div>

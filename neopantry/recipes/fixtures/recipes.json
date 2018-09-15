@@ -1,0 +1,1023 @@
+[
+{
+  "model": "recipes.recipe",
+  "pk": 2,
+  "fields": {
+    "name": "Spicy Coleslaw",
+    "description": "<p>This is an excellent coleslaw to serve with breaded and fried oysters.</p>",
+    "instructions": "<p>Tear off and discard the outer leaves of the cabbages. Quarter the heads and remove their cores. Slice the quarters crosswise, into \u215b-inch-thick strips. Slice the onion lengthwise as thin as possible. Cut the jalape&ntilde;o peppers in half, remove their seeds and veins, and slice the peppers very thin. Coarsely chop the cilantro.</p>\r\n<p>Combine all the sliced vegetables in a large bowl and toss with the lime juice, 2 teaspoons of the white wine vinegar, the olive oil, and salt and pepper to taste. Taste again and, if necessary, add more jalape&ntilde;o and vinegar. Serve at room temperature.</p>\r\n<p>Serves 6.</p>",
+    "photo": "photos/no-image.jpg",
+    "total_make_again": 0,
+    "total_ratings": 0,
+    "num_reviews": 0,
+    "search_vector": "'bread':11B 'coleslaw':2A,7B 'excel':6B 'fri':13B 'oyster':14B 'serv':9B 'spici':1A"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 3,
+  "fields": {
+    "name": "Stuffed Savoy Cabbage",
+    "description": "",
+    "instructions": "<p>Remove the outer leaves of the cabbage and trim the core but leave the cabbage whole. Bring a large pot of salted water to a boil, plunge in the cabbage, and simmer for 15 minutes. Carefully remove the whole cabbage with a skimmer and let it drain, upside down, in a colander or on a dry towel.</p>\r\n<p>Prepare the stuffing: Peel and chop the onion, peel and slice the garlic, and cut the bacon into small dice. Heat a saut&eacute; pan and add the bacon. When it has started to render som fat, add the onion and garlic, and cook, stirring occasionally, until they have started to brown. Add the sausage meat and cook over low heat for 10 minutes.</p>\r\n<p>Preheat the oven to 375&ordm;F.</p>\r\n<p>Cut the crusts off the bread and tear it into small pieces, pour the milk into a bowl, and soak the bread in it for 5 minutes. Squeeze the milk out of the bread and add the bread to the sausage mixture. Chop the herbs and add to the stuffing. Season to taste with salt and pepper.</p>\r\n<p>Delicately open up the cabbage by peeling the leaves back to create a cavity in the center. Season with salt and pepper and pack the stuffing into the center of the cabbage. Fold the leaves back, completely encasing the stuffing, and tie the cabbage with string to help it keep its shape. Put it in a large baking dish, pour the tomato sauce around it, cover, and bake for 1 hour. Check after 30 minutes, and add some water or white wine if the tomato sauce has been reduced too much. Cut off the string and serve the cabbage in its baking dish or on a platter surrounded by the sauce, with parsley leaves scattered over it.</p>\r\n<p>Serves 4 to 6.</p>",
+    "photo": "photos/no-image.jpg",
+    "total_make_again": 0,
+    "total_ratings": 0,
+    "num_reviews": 0,
+    "search_vector": "'cabbag':3A 'savoy':2A 'stuf':1A"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 4,
+  "fields": {
+    "name": "Braised Red or Green Cabbage",
+    "description": "",
+    "instructions": "<p>Remove the outer leaves from the cabbage. Cut it in half, remove the core, and slice the cabbage very thin. Peel the onion and slice very thin.</p>\r\n<p>In a large pan, heat the duck fat, add the onion, and cook for 5 minutes. Put in the cabbage, vinegar, bay leaf, salt and pepper, and water. Cover and simmer for 20 minutes. Peel and grate the apple, add it to the cabbage, and cook for another 5 minutes. Taste and correct the seasoning, and serve.</p>\r\n<p>Serves 4 to 6.</p>",
+    "photo": "photos/no-image.jpg",
+    "total_make_again": 0,
+    "total_ratings": 0,
+    "num_reviews": 0,
+    "search_vector": "'brais':1A 'cabbag':5A 'green':4A 'red':2A"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 5,
+  "fields": {
+    "name": "Red Cabbage with Chestnuts",
+    "description": "",
+    "instructions": "<p>Score the chestnut shells with a knife and parboil them. Drain and peel off the shells and skins. Finish cooking in a little water or chicken stock until just soft enough to be eaten but still firm. Drain, let the cooking liquid cool, return the chestnuts to the liquid, and set aside.</p>\r\n<p>Cut the cabbage as you would for coleslaw, in strips &frac14; inch wide. Cook it in duck fat or butter. When it has started to soften, add the wine.</p>\r\n<p>Break the chestnuts into small chunks and saut&eacute; them separately in duck fat or butter until golden brown. Add the chestnuts to the cabbage and season with salt and pepper and a few drops of the vinegar to brighten the flavor. Continue cooking until the cabbage is very soft, keeping it moist as needed with the chestnuts' cooking liquid. Serve with roast duck or pork or with a Thanksgiving turkey.</p>\r\n<p>Serves 6 to 8.</p>\r\n<p><em>Note</em>: If you wish, flavor the dish with a little Cognac or port, Pineau des Charentes, or cassis.</p>",
+    "photo": "photos/no-image.jpg",
+    "total_make_again": 0,
+    "total_ratings": 0,
+    "num_reviews": 0,
+    "search_vector": "'cabbag':2A 'chestnut':4A 'red':1A"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 6,
+  "fields": {
+    "name": "Braised Cabbage with Halibut",
+    "description": "",
+    "instructions": "<p>Preheat the oven to 400&ordm;F.</p>\r\n<p>Cut the cabbage in half through its core and cut each half into 2-inch wedges. Pack the wedges tightly in a baking dish with the bay leaf and half the thyme. Pour in &frac12; cup each of the chicken stock and the white wine. Make thin slices of about 3 tablespoons of the butter and arrange them evenly on the top of the cabbage; cover and put the dish into the oven for about 45 minutes, until the cabbage is tender. Cut out and discard the cores, chop the cabbage roughly, and return it to its own juices. Taste for seasoning, add salt if necessary, and set aside.</p>\r\n<p>At the same time, roast the potatoes: Rinse them and pat dry with a towel. Put them in a baking dish and toss with olive oil, salt, and the rest of the thyme. Cover and bake 30 to 45 minutes, until done. Slice them in half and add to the cabbage. Increase the oven temperatire to 500&ordm;F.</p>\r\n<p>If you want to include the bacon, cook it now: Cut it into &frac14;-inch pieces and saut&eacute; over medium heat until crisp. Drain and add to the cabbage and potatoes.</p>\r\n<p>Slice the halibut into 6 pieces of roughly equal weight (5 to 6 ounces) and thickness (about 1 inch). Season the pieces of fish on both sides with salt and place them in a baking dish large enough to hold them in one layer without crowding. Distribute the remaining 3 tablespoons of butter over the fish, moisten it with the remaining white wine and chicken stock, and bake in the oven for 5 to 7 minutes, until the fish is just cooked through. At the same time reheat the cabbage and potatoes in the oven, uncovered. Chop enough parsley leaves to make about &frac14; cup.</p>\r\n<p>To serve, arrange the cabbage, potatoes, and bacon around the fish on a warmed platter and pour over the pan juices from both baking dishes. Grind pepper over, sprinkle with the chopped parsley, and serve immediately.</p>\r\n<p>Serves 6.</p>",
+    "photo": "photos/no-image.jpg",
+    "total_make_again": 1,
+    "total_ratings": 5,
+    "num_reviews": 1,
+    "search_vector": "'brais':1A 'cabbag':2A 'halibut':4A"
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 2,
+  "fields": {
+    "description": "2 small heads cabbage (preferably savoy)",
+    "recipe": 2,
+    "food": 3,
+    "amount": "2.000",
+    "measurement": null,
+    "rank": 1
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 3,
+  "fields": {
+    "description": "\u00bd small red onion",
+    "recipe": 2,
+    "food": 14,
+    "amount": "0.500",
+    "measurement": null,
+    "rank": 2
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 4,
+  "fields": {
+    "description": "2 to 3 jalape\u00f1o peppers",
+    "recipe": 2,
+    "food": 15,
+    "amount": "3.000",
+    "measurement": null,
+    "rank": 3
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 5,
+  "fields": {
+    "description": "A few sprigs cilantro",
+    "recipe": 2,
+    "food": 16,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 4
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 6,
+  "fields": {
+    "description": "Juice of 1 lime",
+    "recipe": 2,
+    "food": 17,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 5
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 7,
+  "fields": {
+    "description": "2 to 3 teaspoons white wine vinegar",
+    "recipe": 2,
+    "food": 18,
+    "amount": "3.000",
+    "measurement": 1,
+    "rank": 6
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 8,
+  "fields": {
+    "description": "\u2153 to \u00bd cup extra-virgin olive oil",
+    "recipe": 2,
+    "food": 19,
+    "amount": "0.500",
+    "measurement": 2,
+    "rank": 7
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 9,
+  "fields": {
+    "description": "Salt",
+    "recipe": 2,
+    "food": 1,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 8
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 10,
+  "fields": {
+    "description": "Pepper",
+    "recipe": 2,
+    "food": 12,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 9
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 11,
+  "fields": {
+    "description": "1 savoy cabbage (2 to 3 pounds)",
+    "recipe": 3,
+    "food": 3,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 1
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 12,
+  "fields": {
+    "description": "1 onion",
+    "recipe": 3,
+    "food": 4,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 2
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 13,
+  "fields": {
+    "description": "1 clove garlic",
+    "recipe": 3,
+    "food": 5,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 3
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 14,
+  "fields": {
+    "description": "\u00bc pound bacon",
+    "recipe": 3,
+    "food": 6,
+    "amount": "0.250",
+    "measurement": 3,
+    "rank": 4
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 15,
+  "fields": {
+    "description": "\u00be pound fresh lean sausage meat",
+    "recipe": 3,
+    "food": 7,
+    "amount": "0.750",
+    "measurement": 3,
+    "rank": 5
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 16,
+  "fields": {
+    "description": "4 slices country-style bread",
+    "recipe": 3,
+    "food": 8,
+    "amount": "4.000",
+    "measurement": null,
+    "rank": 6
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 17,
+  "fields": {
+    "description": "1 cup milk",
+    "recipe": 3,
+    "food": 2,
+    "amount": "1.000",
+    "measurement": 2,
+    "rank": 7
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 18,
+  "fields": {
+    "description": "2 sprigs thyme",
+    "recipe": 3,
+    "food": 9,
+    "amount": "2.000",
+    "measurement": null,
+    "rank": 8
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 19,
+  "fields": {
+    "description": "4 sprigs parsley",
+    "recipe": 3,
+    "food": 10,
+    "amount": "4.000",
+    "measurement": null,
+    "rank": 9
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 20,
+  "fields": {
+    "description": "4 to 5 sage leaves",
+    "recipe": 3,
+    "food": 11,
+    "amount": "5.000",
+    "measurement": null,
+    "rank": 10
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 21,
+  "fields": {
+    "description": "Salt",
+    "recipe": 3,
+    "food": 1,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 11
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 22,
+  "fields": {
+    "description": "Pepper",
+    "recipe": 3,
+    "food": 12,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 12
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 23,
+  "fields": {
+    "description": "2 cups homemade tomato sauce",
+    "recipe": 3,
+    "food": 13,
+    "amount": "2.000",
+    "measurement": 2,
+    "rank": 13
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 24,
+  "fields": {
+    "description": "1 handful parsley leaves",
+    "recipe": 3,
+    "food": 10,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 14
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 25,
+  "fields": {
+    "description": "1 red or green cabbage",
+    "recipe": 4,
+    "food": 20,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 1
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 26,
+  "fields": {
+    "description": "1 medium onion",
+    "recipe": 4,
+    "food": 4,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 2
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 27,
+  "fields": {
+    "description": "3 tablespoons duck fat",
+    "recipe": 4,
+    "food": 21,
+    "amount": "3.000",
+    "measurement": 4,
+    "rank": 3
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 28,
+  "fields": {
+    "description": "1 tablespoon sherry vinegar",
+    "recipe": 4,
+    "food": 22,
+    "amount": "1.000",
+    "measurement": 4,
+    "rank": 4
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 29,
+  "fields": {
+    "description": "1 bay leaf",
+    "recipe": 4,
+    "food": 23,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 5
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 30,
+  "fields": {
+    "description": "Salt",
+    "recipe": 4,
+    "food": 1,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 6
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 31,
+  "fields": {
+    "description": "Pepper",
+    "recipe": 4,
+    "food": 12,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 7
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 32,
+  "fields": {
+    "description": "\u00bd cup water",
+    "recipe": 4,
+    "food": 24,
+    "amount": "0.500",
+    "measurement": 2,
+    "rank": 8
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 33,
+  "fields": {
+    "description": "1 apple",
+    "recipe": 4,
+    "food": 25,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 9
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 34,
+  "fields": {
+    "description": "1 pound chestnuts",
+    "recipe": 5,
+    "food": 26,
+    "amount": "1.000",
+    "measurement": 3,
+    "rank": 1
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 35,
+  "fields": {
+    "description": "1 small red cabbage",
+    "recipe": 5,
+    "food": 20,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 2
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 36,
+  "fields": {
+    "description": "Duck fat or butter",
+    "recipe": 5,
+    "food": 21,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 3
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 37,
+  "fields": {
+    "description": "\u00bd cup sweet white wine",
+    "recipe": 5,
+    "food": 27,
+    "amount": "0.500",
+    "measurement": 2,
+    "rank": 4
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 38,
+  "fields": {
+    "description": "Salt",
+    "recipe": 5,
+    "food": 1,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 5
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 39,
+  "fields": {
+    "description": "Pepper",
+    "recipe": 5,
+    "food": 12,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 6
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 40,
+  "fields": {
+    "description": "Sherry vinegar",
+    "recipe": 5,
+    "food": 22,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 7
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 41,
+  "fields": {
+    "description": "1 medium head savoy cabbage",
+    "recipe": 6,
+    "food": 3,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 1
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 42,
+  "fields": {
+    "description": "1 bay leaf",
+    "recipe": 6,
+    "food": 23,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 2
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 43,
+  "fields": {
+    "description": "A few sprigs thyme",
+    "recipe": 6,
+    "food": 9,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 3
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 44,
+  "fields": {
+    "description": "1 cup chicken stock, vegetable stock, or water",
+    "recipe": 6,
+    "food": 29,
+    "amount": "1.000",
+    "measurement": 2,
+    "rank": 4
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 45,
+  "fields": {
+    "description": "1 cup dry white wine",
+    "recipe": 6,
+    "food": 30,
+    "amount": "1.000",
+    "measurement": 2,
+    "rank": 5
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 46,
+  "fields": {
+    "description": "6 tablespoons butter",
+    "recipe": 6,
+    "food": 28,
+    "amount": "6.000",
+    "measurement": 4,
+    "rank": 6
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 47,
+  "fields": {
+    "description": "Salt",
+    "recipe": 6,
+    "food": 1,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 7
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 48,
+  "fields": {
+    "description": "Pepper",
+    "recipe": 6,
+    "food": 12,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 8
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 49,
+  "fields": {
+    "description": "18 small potatoes (Yellow Finns or red creamers)",
+    "recipe": 6,
+    "food": 31,
+    "amount": "18.000",
+    "measurement": null,
+    "rank": 9
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 50,
+  "fields": {
+    "description": "2 tablespoons olive oil",
+    "recipe": 6,
+    "food": 19,
+    "amount": "2.000",
+    "measurement": 4,
+    "rank": 10
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 51,
+  "fields": {
+    "description": "Optional: 2 strips bacon",
+    "recipe": 6,
+    "food": 6,
+    "amount": "2.000",
+    "measurement": null,
+    "rank": 11
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 52,
+  "fields": {
+    "description": "2 pounds halibut (or rock cod) fillet",
+    "recipe": 6,
+    "food": 32,
+    "amount": "2.000",
+    "measurement": 3,
+    "rank": 12
+  }
+},
+{
+  "model": "recipes.ingredient",
+  "pk": 53,
+  "fields": {
+    "description": "1 small bunch Italian parsley",
+    "recipe": 6,
+    "food": 10,
+    "amount": "1.000",
+    "measurement": null,
+    "rank": 13
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 1,
+  "fields": {
+    "name": "salt",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 2,
+  "fields": {
+    "name": "milk",
+    "allergens": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 3,
+  "fields": {
+    "name": "savoy cabbage",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 4,
+  "fields": {
+    "name": "white onion",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 5,
+  "fields": {
+    "name": "garlic",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 6,
+  "fields": {
+    "name": "bacon",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 7,
+  "fields": {
+    "name": "pork sausage",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 8,
+  "fields": {
+    "name": "country-style bread",
+    "allergens": [
+      2
+    ]
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 9,
+  "fields": {
+    "name": "thyme",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 10,
+  "fields": {
+    "name": "parsley",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 11,
+  "fields": {
+    "name": "sage",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 12,
+  "fields": {
+    "name": "black pepper",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 13,
+  "fields": {
+    "name": "tomato sauce",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 14,
+  "fields": {
+    "name": "red onion",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 15,
+  "fields": {
+    "name": "jalape\u00f1o pepper",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 16,
+  "fields": {
+    "name": "cilantro",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 17,
+  "fields": {
+    "name": "lime",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 18,
+  "fields": {
+    "name": "white wine vinegar",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 19,
+  "fields": {
+    "name": "extra-virgin olive oil",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 20,
+  "fields": {
+    "name": "red cabbage",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 21,
+  "fields": {
+    "name": "duck fat",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 22,
+  "fields": {
+    "name": "sherry vinegar",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 23,
+  "fields": {
+    "name": "bay leaf",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 24,
+  "fields": {
+    "name": "water",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 25,
+  "fields": {
+    "name": "apple",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 26,
+  "fields": {
+    "name": "chestnut",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 27,
+  "fields": {
+    "name": "sweet white wine",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 28,
+  "fields": {
+    "name": "butter",
+    "allergens": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 29,
+  "fields": {
+    "name": "chicken stock",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 30,
+  "fields": {
+    "name": "dry white wine",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 31,
+  "fields": {
+    "name": "red creamer potato",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.food",
+  "pk": 32,
+  "fields": {
+    "name": "halibut",
+    "allergens": []
+  }
+},
+{
+  "model": "recipes.measurement",
+  "pk": 1,
+  "fields": {
+    "name": "teaspoon",
+    "abbreviation": "tsp",
+    "measurement_type": "VOLUME",
+    "measurement_unit": "TEASPOON"
+  }
+},
+{
+  "model": "recipes.measurement",
+  "pk": 2,
+  "fields": {
+    "name": "cup",
+    "abbreviation": "cup",
+    "measurement_type": "VOLUME",
+    "measurement_unit": "CUP"
+  }
+},
+{
+  "model": "recipes.measurement",
+  "pk": 3,
+  "fields": {
+    "name": "pound",
+    "abbreviation": "lb",
+    "measurement_type": "WEIGHT",
+    "measurement_unit": "POUND"
+  }
+},
+{
+  "model": "recipes.measurement",
+  "pk": 4,
+  "fields": {
+    "name": "tablespoon",
+    "abbreviation": "tbsp",
+    "measurement_type": "VOLUME",
+    "measurement_unit": "TABLESPOON"
+  }
+},
+{
+  "model": "recipes.allergen",
+  "pk": 1,
+  "fields": {
+    "name": "dairy"
+  }
+},
+{
+  "model": "recipes.allergen",
+  "pk": 2,
+  "fields": {
+    "name": "gluten"
+  }
+},
+{
+  "model": "recipes.recipereview",
+  "pk": 1,
+  "fields": {
+    "recipe": 6,
+    "user": 1,
+    "make_again": true,
+    "rating": 5,
+    "review": "Delicious!"
+  }
+}
+]

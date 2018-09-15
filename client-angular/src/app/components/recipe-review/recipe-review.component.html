@@ -1,0 +1,23 @@
+<!-- Breadcrumbs -->
+<nav>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href [routerLink]="['..']">Recipes</a>
+    </li>
+    <!-- <li class="breadcrumb-item">
+        <a href [routerLink]="['..']">{{ recipe.name }}</a>
+    </li> -->
+    <li class="breadcrumb-item active">User Reviews</li>
+  </ol>
+</nav>
+
+<div class="row">
+    <div class="col">
+      <div class="card" *ngFor="let recipeReview of recipeReviews">
+        <div class="card-body">
+          <p class="card-text">{{ recipeReview.rating }}/5 <strong>{{ recipeReview.userUsername }}</strong></p>
+          <p class="card-text">{{ recipeReview.review }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

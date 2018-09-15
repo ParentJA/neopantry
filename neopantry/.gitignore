@@ -1,0 +1,5 @@
+# Directories...
+/www/bower_components
+/www/node_modules
+# /www/dist
+/static
