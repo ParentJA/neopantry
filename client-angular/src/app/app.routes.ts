@@ -35,7 +35,8 @@ export const ROUTES: Routes = [
         path: ':id',
         component: RecipeDetailComponent,
         resolve: {
-          recipe: RecipeDetailResolver
+          recipe: RecipeDetailResolver,
+          reviews: RecipeReviewResolver
         }
       },
       {

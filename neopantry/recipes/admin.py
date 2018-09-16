@@ -27,8 +27,14 @@ class IngredientInline(admin.TabularInline):
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
     change_form_template = 'recipes/admin/change_form.html'
-    fields = ('name', 'description', 'instructions', 'photo',)
-    readonly_fields = ('short_description', 'average_make_again', 'average_rating', 'num_reviews', 'search_vector',)
+    fields = (
+        'id', 'name', 'description', 'instructions', 'photo', 'total_make_again', 'average_make_again',
+        'total_ratings', 'average_rating', 'num_reviews', 'search_vector',
+    )
+    readonly_fields = (
+        'id', 'short_description', 'total_make_again', 'average_make_again', 'total_ratings', 'average_rating',
+        'num_reviews', 'search_vector',
+    )
     list_display = ('name', 'short_description', 'photo', 'average_make_again', 'average_rating', 'num_reviews',)
     inlines = (IngredientInline,)
 

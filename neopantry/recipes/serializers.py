@@ -1,3 +1,6 @@
+# Django imports.
+from django.db import transaction
+
 # Third-party imports.
 from rest_framework import serializers
 
@@ -52,6 +55,39 @@ class RecipeReviewSerializer(serializers.ModelSerializer):
         model = RecipeReview
         fields = ('id', 'recipe', 'user', 'make_again', 'rating', 'review', 'username',)
         read_only_fields = ('id', 'username',)
+
+    def create(self, validated_data):
+        with transaction.atomic():
+            # Create review.
+            review = super().create(validated_data)
+
+            # Update recipe.
+            recipe = review.recipe
+            recipe.total_make_again += (1 if review.make_again else 0)
+            recipe.total_ratings += review.rating
+            recipe.num_reviews += 1
+            recipe.save()
+
+            return review
+
+    def update(self, instance, validated_data):
+        with transaction.atomic():
+            # Update recipe.
+            recipe = instance.recipe
+            recipe.total_make_again -= (1 if instance.make_again else 0)
+            recipe.total_ratings -= instance.rating
+            recipe.num_reviews -= 1
+
+            # Update review.
+            review = super().update(instance, validated_data)
+
+            # Update recipe again.
+            recipe.total_make_again += (1 if review.make_again else 0)
+            recipe.total_ratings += review.rating
+            recipe.num_reviews += 1
+            recipe.save()
+
+            return review
 
 
 class ReadUserRecipeSerializer(serializers.ModelSerializer):

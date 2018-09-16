@@ -74,6 +74,24 @@ export class RecipeForList {
   }
 }
 
+export class RecipeNote {
+  constructor(
+    public id: number,
+    public recipe: number,
+    public user: number,
+    public note: string
+  ) {}
+
+  static create(data: any): RecipeNote {
+    return new RecipeNote(
+      data.id,
+      data.recipe,
+      data.user,
+      data.note
+    );
+  }
+}
+
 export class RecipeReview {
   constructor(
     public id: number,
@@ -184,7 +202,18 @@ export class RecipeService {
     );
   }
 
-  createRecipeNote(): void {}
+  createRecipeNote(
+    recipeId: number,
+    userId: number,
+    note: string
+  ): Observable<RecipeNote> {
+    const url = `/api/v1/recipes/notes/`;
+    return this.client.post<RecipeNote>(url, {
+      recipe: recipeId, user: userId, note
+    }).pipe(
+      map((recipeNoteData: any) => RecipeNote.create(recipeNoteData))
+    );
+  }
 
   getRecipeReviews(recipe: number = null, user: number = null): Observable<RecipeReview[]> {
     let params: HttpParams = new HttpParams();
@@ -201,7 +230,20 @@ export class RecipeService {
     );
   }
 
-  createRecipeReview(): void {}
+  createRecipeReview(
+    recipeId: number,
+    userId: number,
+    makeAgain: boolean,
+    rating: number,
+    review: string
+  ): Observable<RecipeReview> {
+    const url = `/api/v1/recipes/reviews/`;
+    return this.client.post<RecipeReview>(url, {
+      recipe: recipeId, user: userId, make_again: makeAgain, rating, review
+    }).pipe(
+      map((recipeReviewData: any) => RecipeReview.create(recipeReviewData))
+    );
+  }
 
   getUserRecipes(userId: number, page: number = 1): Observable<RecipeData> {
     let params: HttpParams = new HttpParams();

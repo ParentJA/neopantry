@@ -173,14 +173,6 @@ class RecipeSearchViewTest(APITestCase):
         #
         # self.assertEqual(num_reviews(recipe_reviews), response.data[0].get('num_reviews'))
 
-    # def test_search_vector_is_added_to_recipe_on_save(self):
-    #     # When.
-    #     recipe = Recipe(name='Recipe')
-    #     recipe.save()
-    #
-    #     # Then.
-    #     self.assertIsNotNone(recipe.search_vector)
-
 
 class RecipeNoteTest(APITestCase):
     def setUp(self):
@@ -349,6 +341,59 @@ class RecipeReviewTest(APITestCase):
         self.assertEqual(100, recipe.average_make_again)
         self.assertEqual(5, recipe.average_rating)
         self.assertEqual(5, recipe.num_reviews)
+
+    def test_updating_review_updates_recipe(self):
+        # Given.
+        recipe = RecipeFactory(total_make_again=1, total_ratings=5, num_reviews=1)
+        review = RecipeReviewFactory(recipe=recipe, user=self.user1, make_again=True, rating=5)
+
+        # And.
+        self.assertEqual(100, recipe.average_make_again)
+        self.assertEqual(5.0, recipe.average_rating)
+
+        # When.
+        response = self.client.put(reverse('recipes:recipe-review-by-id', kwargs={'pk': review.pk}), data={
+            'recipe': review.recipe.pk,
+            'user': review.user.pk,
+            'make_again': False,
+            'rating': 3,
+            'review': review.review,
+        })
+
+        # Then.
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(review.recipe.pk, response.data['recipe'])
+        self.assertEqual(review.user.pk, response.data['user'])
+        self.assertEqual(False, response.data['make_again'])
+        self.assertEqual(3, response.data['rating'])
+        self.assertEqual(review.review, response.data['review'])
+
+        # And.
+        recipe = Recipe.objects.get(pk=recipe.pk)
+        self.assertEqual(0, recipe.average_make_again)
+        self.assertEqual(3, recipe.average_rating)
+        self.assertEqual(1, recipe.num_reviews)
+
+    def test_destroying_review_updates_recipe(self):
+        # Given.
+        recipe = RecipeFactory(total_make_again=1, total_ratings=5, num_reviews=1)
+        review = RecipeReviewFactory(recipe=recipe, user=self.user1, make_again=True, rating=5)
+
+        # And.
+        self.assertEqual(100, recipe.average_make_again)
+        self.assertEqual(5.0, recipe.average_rating)
+
+        # When.
+        response = self.client.delete(reverse('recipes:recipe-review-by-id', kwargs={'pk': review.pk}))
+
+        # Then.
+        self.assertEqual(204, response.status_code)
+
+        # And.
+        recipe = Recipe.objects.get(pk=recipe.pk)
+        self.assertEqual(0, recipe.average_make_again)
+        self.assertEqual(0, recipe.average_rating)
+        self.assertEqual(0, recipe.num_reviews)
 
     def test_user_can_only_create_recipe_review_for_self(self):
         # Given.

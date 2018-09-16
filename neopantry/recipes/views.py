@@ -1,4 +1,5 @@
 # Django imports.
+from django.db import transaction
 from django.db.models import F, Prefetch
 
 # Third-party imports.
@@ -46,11 +47,13 @@ class RecipeNoteView(viewsets.ModelViewSet):
 
 class UserNoteView(generics.CreateAPIView):
     permission_classes = (permissions.IsAuthenticated, IsResourceOwner,)
+    queryset = RecipeNote.objects.all()
     serializer_class = RecipeNoteSerializer
 
 
 class UserNoteByIdView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.IsAuthenticated, IsResourceOwner,)
+    queryset = RecipeNote.objects.all()
     serializer_class = RecipeNoteSerializer
 
 
@@ -61,15 +64,23 @@ class RecipeReviewView(generics.ListCreateAPIView):
     queryset = RecipeReview.objects.select_related('recipe', 'user').all()
     serializer_class = RecipeReviewSerializer
 
-    def perform_create(self, serializer):
-        recipe_review = serializer.save()
 
-        # Update recipe.
-        recipe = recipe_review.recipe
-        recipe.total_make_again += (1 if recipe_review.make_again else 0)
-        recipe.total_ratings += recipe_review.rating
-        recipe.num_reviews += 1
-        recipe.save()
+class RecipeReviewByIdView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (permissions.IsAuthenticated, IsResourceOwner,)
+    queryset = RecipeReview.objects.select_related('recipe', 'user').all()
+    serializer_class = RecipeReviewSerializer
+
+    def perform_destroy(self, instance):
+        with transaction.atomic():
+            # Update recipe.
+            recipe = instance.recipe
+            recipe.total_make_again -= (1 if instance.make_again else 0)
+            recipe.total_ratings -= instance.rating
+            recipe.num_reviews -= 1
+            recipe.save()
+
+            # Delete review.
+            instance.delete()
 
 
 # class UserRecipeView(views.APIView):
