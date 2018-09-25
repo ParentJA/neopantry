@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+
+  database:
+    image: postgres:10.4
+    ports:
+      - "0:5432"
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data/
+
+  neopantry:
+    build: .
+    command: >
+      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
+    environment:
+      - DJANGO_SETTINGS_MODULE=settings.local
+      - PGDATABASE=postgres
+      - PGUSER=postgres
+    #   - PGPASSWORD=pAssw0rd!
+      - PGHOST=database_1
+    #   - PGPORT=5432
+    links:
+      - database
+    ports:
+      - "8000:8000"
+    volumes: 
+      - .:/usr/src/app
+
+volumes:
+  postgres_data:

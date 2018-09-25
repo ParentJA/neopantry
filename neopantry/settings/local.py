@@ -14,8 +14,8 @@ DATABASES = {
         'NAME': os.getenv('PGDATABASE'),
         'USER': os.getenv('PGUSER'),
         'PASSWORD': os.getenv('PGPASSWORD'),
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': os.getenv('PGHOST', 'localhost'),
+        'PORT': os.getenv('PGPORT', '5432'),
     }
 }
 
