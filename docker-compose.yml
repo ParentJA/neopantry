@@ -1,33 +1,67 @@
-version: '3.7'
+version: "3.8"
 
 services:
 
   database:
-    image: postgres:10.4
+    container_name: neopantry-database
+    environment:
+      - POSTGRES_DB=neopantry
+      - POSTGRES_USER=neopantry
+      - POSTGRES_PASSWORD=neopantry
+    image: postgres:15.3-alpine
     ports:
-      - "0:5432"
+      - 5433:5432
     volumes: 
-      - postgres_data:/var/lib/postgresql/data/
+      - neopantry-database:/var/lib/postgresql/data
 
-  neopantry:
-    build: .
-    command: >
-      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+  server:
+    build:
+      context: ./server
+    command: [ "bash", "start.sh" ]
+    container_name: neopantry-server
     depends_on:
       - database
     environment:
-      - DJANGO_SETTINGS_MODULE=settings.local
-      - PGDATABASE=postgres
-      - PGUSER=postgres
-    #   - PGPASSWORD=pAssw0rd!
-      - PGHOST=database_1
-    #   - PGPORT=5432
-    links:
-      - database
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=neopantry
+      - SQL_USER=neopantry
+      - SQL_PASSWORD=neopantry
+      - SQL_HOST=neopantry-database
+      - SQL_PORT=5432
     ports:
-      - "8000:8000"
+      - 8000
     volumes: 
-      - .:/usr/src/app
+      - ./server:/usr/src/app
+      - media:/usr/src/app/media
+      - static:/usr/src/app/static
+
+  client:
+    build:
+      context: ./client
+    command: [ "yarn", "start" ]
+    container_name: neopantry-client
+    depends_on:
+      - server
+    ports:
+      - 3000
+    volumes:
+      - ./client:/usr/src/app
+
+  reverse-proxy:
+    build:
+      context: ./reverse-proxy
+    container_name: neopantry-reverse-proxy
+    depends_on:
+      - server
+      - client
+    ports:
+      - 8003:80
+    restart: always
+    volumes:
+      - media:/usr/src/app/media
+      - static:/usr/src/app/static
 
 volumes:
-  postgres_data:
+  neopantry-database:
+  media:
+  static:

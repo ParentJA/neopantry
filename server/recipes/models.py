@@ -49,15 +49,13 @@ class RecipeQuerySet(QuerySet):
         return self.raw(raw_query=sql, params=[allergens])
 
     def search(self, query):
+        search_query = SearchQuery(query, search_type='plain')
         return self.annotate(
-            search_rank=SearchRank(F('search_vector'), SearchQuery(query)),
-            trigram_similarity=TrigramSimilarity('recipesearchword__word', query)
+            search_rank=SearchRank(F('search_vector'), search_query),
         ).filter(
-            Q(search_rank__gte=0.1) | Q(trigram_similarity__gt=0.3)
+            search_vector=search_query,
         ).order_by(
             '-search_rank', 'id'
-        ).distinct(
-            'search_rank', 'id'
         )
 
 
@@ -70,6 +68,7 @@ class Recipe(models.Model):
 
     name = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
+    ingredients_text = models.TextField(null=True, blank=True)
     instructions = models.TextField(null=True, blank=True)
     foods = models.ManyToManyField('recipes.Food', through='recipes.Ingredient', through_fields=('recipe', 'food'))
     photo = models.ImageField(upload_to='photos', default='photos/no-image.jpg', blank=True, null=True)
@@ -105,11 +104,22 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class RecipeSearchWordQuerySet(models.query.QuerySet):
+    def search(self, query):
+        return self.annotate(
+            similarity=TrigramSimilarity('word', query)
+        ).filter(similarity__gte=0.3).order_by('-similarity')
 
 
 class RecipeSearchWord(models.Model):
-    recipe = models.ForeignKey('recipes.Recipe', on_delete=models.CASCADE)
-    word = models.TextField()
+    word = models.CharField(max_length=255, unique=True)
+
+    objects = RecipeSearchWordQuerySet.as_manager()
+
+    def __str__(self):
+        return self.word
 
 
 class Ingredient(models.Model):
@@ -134,7 +144,7 @@ class Ingredient(models.Model):
 class Food(models.Model):
     """An edible item."""
 
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     allergens = models.ManyToManyField('recipes.Allergen', blank=True)
 
     @staticmethod
